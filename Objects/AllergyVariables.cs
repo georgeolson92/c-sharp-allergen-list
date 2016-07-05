@@ -8,6 +8,11 @@ namespace Allergies.Objects
     public List<string> AllergenGenerator(int input)
     {
       List<string> results = new List<string> {};
+      if (input >= 8)
+      {
+        results.Add("strawberries");
+        input -= 4;
+      }
       if (input >= 4)
       {
         results.Add("shellfish");
