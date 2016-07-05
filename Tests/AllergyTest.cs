@@ -33,5 +33,18 @@ namespace Allergies.Objects
       Assert.Equal(expectedResult, result);
     }
 
+    [Fact]
+    public void AllergenGenerator_userInput255_ReturnList()
+    {
+      //Arrange
+      List <string> expectedResult = new List <string> {"cats", "pollen", "chocolate", "tomatoes", "strawberries", "shellfish", "peanuts", "eggs"};
+      AllergenList newAllergenList = new AllergenList();
+
+      //Act
+      List <string> result = newAllergenList.AllergenGenerator(255);
+
+      //Assert
+      Assert.Equal(expectedResult, result);
+    }
   }
 }
